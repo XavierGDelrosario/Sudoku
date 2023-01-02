@@ -26,14 +26,8 @@ public class SquareTest {
 
     @Test
     public void testChangeable() {
-        assertTrue(nullSquare.setValue(3));
+        nullSquare.setValue(3);
         assertEquals(3, nullSquare.getValue());
-    }
-
-    @Test
-    public void testUnchangeable() {
-        assertFalse(square.setValue(3));
-        assertEquals(1, square.getValue());
     }
 
 }

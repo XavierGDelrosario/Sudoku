@@ -12,13 +12,8 @@ public class Square {
         changeable = value == 0;
     }
 
-    //EFFECTS: if changeable set value to given value and return true, else return false
-    public boolean setValue(int i) {
-        if (changeable) {
-            value = i;
-            return true;
-        }
-        return false;
+    public void setValue(int i) {
+        value = i;
     }
 
     public int getValue() {

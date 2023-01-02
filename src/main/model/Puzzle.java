@@ -5,6 +5,7 @@ import java.util.List;
 
 //Represents a sudoku puzzle
 public class Puzzle {
+    private final List<Integer> initialValues;
     private final List<Square> squares;
     private final List<Group> rows;
     private final List<Group> columns;
@@ -14,6 +15,7 @@ public class Puzzle {
     //EFFECTS: creates a sudoku puzzle from values, values read row by row
     public Puzzle(List<Integer> values) {
         squares = new ArrayList<>();
+        initialValues = values;
         for (int i : values) {
             squares.add(new Square(i));
         }
@@ -23,7 +25,7 @@ public class Puzzle {
 
         createRowsAndColumns();
         createGrids();
-        }
+    }
 
     //MODIFIES: this
     //EFFECTS: groups squares into 3x3 grids
@@ -96,5 +98,9 @@ public class Puzzle {
             values.add(square.getValue());
         }
         return values;
+    }
+
+    public List<Integer> getInitialValues() {
+        return initialValues;
     }
 }

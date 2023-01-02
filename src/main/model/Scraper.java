@@ -27,6 +27,7 @@ public class Scraper {
                 values.add(Integer.parseInt(cells.get(i).child(0).attributes().get("value")));
             }
         }
+
         return new Puzzle(values);
     }
 
